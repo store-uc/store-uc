@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store UC - PUBG UC Charging</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#home">
+            <h1 class="logo">Store UC</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Welcome to Store UC!</h2>
+            <p>Your one-stop solution for PUBG UC charging.</p>
+        </div>
+    </section>
+
+    <section class="packages" id="packages">
+        <h2>Available Packages</h2>
+        <div class="packages-grid">
+            <div class="package">
+                <img src="images/60uc.png" alt="UC 60">
+                <h3>60 UC</h3>
+                <p>55 EGP</p>
+                <button class="buy-button" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+            </div>
+            <div class="package">
+                <img src="images/325uc.png" alt="UC 325">
+                <h3>325 UC</h3>
+                <p>240 EGP</p>
+                <button class="buy-button" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+            </div>
+            <div class="package">
+                <img src="images/660uc.png" alt="UC 660">
+                <h3>660 UC</h3>
+                <p>440 EGP</p>
+                <button class="buy-button" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+            </div>
+            <div class="package">
+                <img src="images/1800uc.png" alt="UC 1800">
+                <h3>1800 UC</h3>
+                <p>1050 EGP</p>
+                <button class="buy-button" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+            </div>
+            <div class="package">
+                <img src="images/3850uc.png" alt="UC 3850">
+                <h3>3850 UC</h3>
+                <p>2240 EGP</p>
+                <button class="buy-button" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+            </div>
+            <div class="package">
+                <img src="images/8100uc.png" alt="UC 8100">
+                <h3>8100 UC</h3>
+                <p>4150 EGP</p>
+                <button class="buy-button" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+            </div>
+            <div class="package">
+                <img src="images/16200uc.png" alt="UC 16200">
+                <h3>16200 UC</h3>
+                <p>8500 EGP</p>
+                <button class="buy-button" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+            </div>
+            <div class="package">
+                <img src="images/24300uc.png" alt="UC 24300">
+                <h3>24300 UC</h3>
+                <p>12700 EGP</p>
+                <button class="buy-button" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+            </div>
+            <div class="package">
+                <img src="images/32400uc.png" alt="UC 32400">
+                <h3>32400 UC</h3>
+                <p>17000 EGP</p>
+                <button class="buy-button" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+            </div>
+            <div class="package">
+                <img src="images/40500uc.png" alt="UC 40500">
+                <h3>40500 UC</h3>
+                <p>21500 EGP</p>
+                <button class="buy-button" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+            </div>
+            <div class="package">
+                <img src="images/81000uc.png" alt="UC 81000">
+                <h3>81000 UC</h3>
+                <p>42500 EGP</p>
+                <button class="buy-button" onclick="openPaymentModal()"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>How to purchase UC?</h3>
+            <p>1. Choose a package and click on "Buy Now".</p>
+            <p>2. Follow the payment instructions for Vodafone Cash.</p>
+        </div>
+    </section>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePaymentModal()">&times;</span>
+            <h2>Vodafone Cash Payment</h2>
+            <p>Please send the amount to Vodafone Cash: <strong>(01070817647)</strong></p>
+            <p>After payment, please enter your Player ID and upload a screenshot of the transaction below:</p>
+
+            <form id="paymentForm">
+                <label for="phoneNumber">Phone Number (Vodafone Cash):</label>
+                <input type="text" id="phoneNumber" placeholder="Enter the phone number you transferred from" required>
+                
+                <label for="playerID">Player ID:</label>
+                <input type="text" id="playerID" placeholder="Enter your Player ID" required>
+                
+                <label for="screenshotUpload">Upload Screenshot:</label>
+                <input type="file" id="screenshotUpload" accept="image/*" required>
+                
+                <button type="submit" class="confirm-payment">Confirm Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Store UC. All rights reserved.</p>
+        <p class="rights">الحقوق محفوظة.</p>
+    </footer>  
+
+
+        <!-- ربط ملف JavaScript هنا -->
+        <script src="script.js"></script>
+
+</body>
+</html>
