@@ -1,0 +1,260 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* لون خلفية فاتح */
+    color: #333; /* لون نص داكن */
+}
+
+/* Adjusting Header */
+header {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Reduced padding */
+}
+
+header a {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none; /* إزالة التسطير */
+    transition: text-shadow 0.3s ease, color 0.3s ease; /* إضافة تأثير الانتقال */
+    font-size: 1.7rem; /* Reduced font size */
+}
+
+.logo:hover {
+    text-shadow: 0 0 15px rgba(30, 144, 255, 0.8), 0 0 30px rgba(30, 144, 255, 0.5); /* تأثير الإضاءة */
+    color: #1e90ff; /* تغيير اللون عند التمرير */
+}
+
+/* Enlarging the section words */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    flex-direction: row-reverse;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.3rem; /* Increased font size for section words */
+}
+
+nav a:hover {
+    color: #1e90ff; /* تغيير لون التمرير */
+}
+
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+.packages {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.packages h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #1e90ff; /* اللون الأزرق */
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.package {
+    background-color: #fff; /* خلفية فاتحة للحزم */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر عموديًا */
+    justify-content: space-between; /* توزيع المساحة بين العناصر */
+}
+
+.package:hover {
+    transform: scale(1.05);
+}
+
+.package img {
+    width: 100px;
+    margin-bottom: 20px;
+    align-self: center; /* ضبط الصورة في المنتصف */
+}
+
+.package h3, .package p {
+    margin-bottom: 20px;
+}
+
+.buy-button {
+    background-color: #1e90ff; /* اللون الأزرق */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin-top: auto; /* لدفع الزر إلى أسفل البطاقة */
+}
+
+
+.buy-button:hover {
+    background-color: #1c86ee; /* درجة أغمق من الأزرق */
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff; /* خلفية فاتحة */
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.close {
+    color: #1e90ff; /* اللون الأزرق */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #1c86ee; /* درجة أغمق من الأزرق */
+}
+
+.modal h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.modal p {
+    margin-bottom: 20px;
+}
+
+.modal input[type="text"],
+.modal input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #1e90ff; /* إطار باللون الأزرق */
+    background-color: #f0f0f0; /* لون خلفية فاتح */
+    color: #333; /* لون نص داكن */
+}
+
+.confirm-payment {
+    background-color: #1e90ff; /* اللون الأزرق */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.confirm-payment:hover {
+    background-color: #1c86ee; /* درجة أغمق من الأزرق */
+}
+
+/* FAQ Section */
+.faq {
+    padding: 50px 20px;
+}
+
+.faq h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #1e90ff; /* اللون الأزرق */
+    text-align: center;
+}
+
+.faq-item {
+    background-color: #fff; /* خلفية فاتحة */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+.faq-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #1e1e1e;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .rights {
+    color: #fff; /* نص باللون الأبيض */
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .packages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
