@@ -1,13 +1,13 @@
-// Script to toggle FAQ items
-document.addEventListener('DOMContentLoaded', function () {
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', function () {
-            const content = this.nextElementSibling;
-            
-            // Toggle display of the content
-            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+// إضافة تفاعل لإظهار الإجابة عند النقر على السؤال
+document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
+        
+        // إغلاق بقية الأسئلة
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+            if (otherItem !== item) {
+                otherItem.classList.remove('active');
+            }
         });
     });
 });
