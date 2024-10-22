@@ -21,7 +21,7 @@ header {
     top: 0;
     z-index: 100;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* تعديل هنا لوضع اللوجو في المنتصف */
     align-items: center;
     background-color: #ffffff;
     padding: 20px 40px;
